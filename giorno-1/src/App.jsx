@@ -7,6 +7,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
+    //prova di autorizzazione
     <>
       <div>
         <a href="https://vite.dev" target="_blank">
