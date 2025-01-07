@@ -1,10 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import BtnClicca from "./components/ButtonComponent";
+import ImageSun from "./components/ImageComponent";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     //prova di autorizzazione
@@ -29,8 +31,13 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <BtnClicca ClickFun="Fai click qua!"/>
+      <ImageSun
+        src="https://learnandsupport.getolympus.com/sites/default/files/styles/hero_large/public/2023-07/sunset_1.jpg?itok=wafKkn5T"
+        alt="tramonto"
+      />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
