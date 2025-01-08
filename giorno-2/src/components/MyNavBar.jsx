@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 function MyNavBar() {
   return (
     <Container fluid={true} className="m-0 p-0">
-      <Navbar collapseOnSelect expand="lg" bg="dark" data-bs-theme="dark" className="p-3 w-100">
+      <Navbar collapseOnSelect expand="lg" bg="dark" data-bs-theme="dark" className="p-3 position-fixed top-0 z-1 w-100">
         <Navbar.Brand href="#home">EPIC_books</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

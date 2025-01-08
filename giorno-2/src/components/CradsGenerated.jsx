@@ -1,6 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
+import { Col, Container, Row, Button, Card } from "react-bootstrap";
 import fantasyBooks from "../data/fantasy.json";
 import { Component } from "react";
 

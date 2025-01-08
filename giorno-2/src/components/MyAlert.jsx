@@ -6,7 +6,7 @@ function MyAlert() {
   return (
     <Container className="my-5">
       <Row>
-        <Alert variant="primary">
+        <Alert variant="primary" className="my-5">
           <Alert.Heading>Hey, nice to see you again!</Alert.Heading>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum corporis quam esse, accusantium, totam iusto fuga porro pariatur ullam dolor rem quaerat ab placeat, animi amet numquam! Ex, provident dignissimos?
@@ -17,7 +17,7 @@ function MyAlert() {
             Courious to see the offers? Don&apos;t hesitate and click here!
           </h4>
           <div className="d-flex justify-content-center">
-          <button type="button" className="btn btn-warning my-2">See Offers!</button>
+          <button type="button" className="btn btn-warning my-2 py-3 px-4">See Offers!</button>
           </div>
         </Alert>
       </Row>
