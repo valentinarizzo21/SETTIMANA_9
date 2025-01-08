@@ -1,22 +1,24 @@
 import { Container, Row } from "react-bootstrap";
 import Alert from "react-bootstrap/Alert";
 
+
 function MyAlert() {
   return (
-    <Container fluid={true}>
+    <Container className="my-5">
       <Row>
-        <Alert variant="success">
-          <Alert.Heading>Hey, nice to see you</Alert.Heading>
+        <Alert variant="primary">
+          <Alert.Heading>Hey, nice to see you again!</Alert.Heading>
           <p>
-            Aww yeah, you successfully read this important alert message. This
-            example text is going to run a bit longer so that you can see how
-            spacing within an alert works with this kind of content.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum corporis quam esse, accusantium, totam iusto fuga porro pariatur ullam dolor rem quaerat ab placeat, animi amet numquam! Ex, provident dignissimos?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium commodi perferendis asperiores odit eaque? Enim at est assumenda illo cupiditate exercitationem debitis delectus omnis culpa, dolore harum totam tenetur cum?
           </p>
           <hr />
-          <p className="mb-0">
-            Whenever you need to, be sure to use margin utilities to keep things
-            nice and tidy.
-          </p>
+          <h4 className="mb-0">
+            Courious to see the offers? Don&apos;t hesitate and click here!
+          </h4>
+          <div className="d-flex justify-content-center">
+          <button type="button" className="btn btn-warning my-2">See Offers!</button>
+          </div>
         </Alert>
       </Row>
     </Container>

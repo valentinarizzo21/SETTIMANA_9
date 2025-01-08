@@ -1,6 +1,6 @@
 const MyFooter = () => {
-    return(
-        <footer className="bg-dark text-white py-4 mt-5">
+  return (
+    <footer className="bg-dark text-white py-4 mt-5 position-sticky bottom-0">
       <div className="container">
         <div className="row">
           <div className="col-md-6">
@@ -28,7 +28,7 @@ const MyFooter = () => {
         </div>
       </div>
     </footer>
-    )
-}
+  );
+};
 
-export default MyFooter
+export default MyFooter;

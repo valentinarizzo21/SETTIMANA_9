@@ -1,6 +1,7 @@
 import MyNavBar from "./components/MyNavBar";
 import MyFooter from "./components/MyFooter";
 import MyAlert from "./components/MyAlert";
+import CardsGenerated from "./components/CradsGenerated";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -11,8 +12,10 @@ function App() {
       </header>
       <main>
         <section>
-          <h1>La Tua Libreria Virtuale!</h1>
           <MyAlert />
+        </section>
+        <section>
+          <CardsGenerated/>
         </section>
       </main>
       <footer>
