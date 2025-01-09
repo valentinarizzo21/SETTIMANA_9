@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Container, Row, Modal, Alert, Button } from "react-bootstrap";
 
 function MyAlert() {
@@ -37,17 +37,17 @@ function MyAlert() {
       </Row>
       <Modal show={showModal} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Exclusive Offers!</Modal.Title>
+          <Modal.Title><i>Exclusive Offers!</i></Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <p>Here are the best offers for you!</p>
           {'Buy 2 get 1 free'}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="primary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="warning" onClick={handleClose}>
             Go to Shop
           </Button>
         </Modal.Footer>
