@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Component } from "react";
-import { Card, Button, Col } from "react-bootstrap";
+import { Card, Button, Col} from "react-bootstrap";
 
 class SingleBook extends Component {
   state = {
@@ -15,7 +15,6 @@ class SingleBook extends Component {
   
   render() {
     return (
-      
           <Col
             key={this.props.book.asin}
             xs={12}

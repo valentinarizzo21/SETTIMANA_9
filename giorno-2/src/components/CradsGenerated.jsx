@@ -16,6 +16,7 @@ class CardsGenerated extends Component {
     return (
       <Container className="p-0">
         <Row className="d-flex g-2">
+          
           {fantasyBooks.map((book) => (
             <Col key={book.asin} xs={12} sm={6} md={4} lg={3} className="p-1">
               <Card
