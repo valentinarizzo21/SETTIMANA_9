@@ -1,21 +1,38 @@
 /* eslint-disable react/prop-types */
 import { Component } from "react";
-import { Card, Button, Col, Container, Row } from "react-bootstrap";
+import { Card, Button, Col } from "react-bootstrap";
 
 class SingleBook extends Component {
+  state = {
+    selected: false,
+  }
+  changeBorder(){
+    if(this.state.selected){
+      return "border-2 border-warning"
+    }else{
+      return "border-none"
+    } }
+  
   render() {
     return (
-      <Container className="p-0">
-        <Row className="d-flex g-2">
+      
           <Col
             key={this.props.book.asin}
             xs={12}
             sm={6}
             md={4}
             lg={3}
-            className="p-1"
+            className="p-1 col-lg-3 col-md-4 col-sm-6 col-12"
           >
-            <Card style={{ height: "fit-content" }}>
+            <Card style={{ height: "fit-content" }}
+            className={this.changeBorder()}
+            onClick={() => {
+              if(this.state.selected){
+                this.setState({selected: false})
+              }else{
+                this.setState({selected: true})
+              } }}
+            >
               <Card.Img
                 variant="top"
                 src={this.props.book.img}
@@ -34,12 +51,12 @@ class SingleBook extends Component {
                 <Card.Text className="align-self-end">
                   <i>{this.props.book.category}</i>
                 </Card.Text>
-                <Button variant="primary">Shop Now</Button>
+                <Button variant="primary" 
+                  >Shop Now</Button>
               </Card.Body>
             </Card>
           </Col>
-        </Row>
-      </Container>
+        
     );
   }
 }
