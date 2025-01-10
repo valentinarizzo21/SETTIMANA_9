@@ -12,7 +12,7 @@ class BookList extends Component {
     return (
       <Container className="p-0">
         <Row className="g-2 ">
-          <Form>
+          <Form className="my-5">
             <Form.Control
               size="lg"
               type="text"
@@ -29,12 +29,13 @@ class BookList extends Component {
               })
             : this.props.bookList
                 .filter((book) =>
-                  book.title.toLowerCase().includes(this.state.inputValue.toLowerCase())
+                  book.title
+                    .toLowerCase()
+                    .includes(this.state.inputValue.toLowerCase())
                 )
                 .map((bk) => {
                   return <SingleBook key={bk.asin} book={bk} />;
-                })
-          }
+                })}
         </Row>
       </Container>
     );
@@ -42,4 +43,3 @@ class BookList extends Component {
 }
 
 export default BookList;
-
