@@ -1,45 +1,34 @@
 /* eslint-disable react/prop-types */
 import SingleBook from "./SingleBook";
 import { Container, Row, Form } from "react-bootstrap";
-import { Component } from "react";
+import { useState } from "react";
 
-class BookList extends Component {
-  state = {
-    inputValue: "",
-  };
+const BookList = ({ bookList }) => {
+  const [inputValue, setInputValue] = useState("");
 
-  render() {
-    return (
-      <Container className="p-0">
-        <Row className="g-2 ">
-          <Form className="my-5">
-            <Form.Control
-              size="lg"
-              type="text"
-              placeholder="Search your book here!"
-              onChange={(e) => {
-                this.setState({ inputValue: e.target.value });
-              }}
-              value={this.state.inputValue}
-            />
-          </Form>
-          {!this.state.inputValue
-            ? this.props.bookList.map((bk) => {
-                return <SingleBook key={bk.asin} book={bk} />;
-              })
-            : this.props.bookList
-                .filter((book) =>
-                  book.title
-                    .toLowerCase()
-                    .includes(this.state.inputValue.toLowerCase())
-                )
-                .map((bk) => {
-                  return <SingleBook key={bk.asin} book={bk} />;
-                })}
-        </Row>
-      </Container>
-    );
-  }
-}
+  return (
+    <Container className="p-0 w-75">
+      <Row className="g-2 w-100">
+        <Form className="my-5 w-100">
+          <Form.Control
+            size="lg"
+            type="text"
+            placeholder="Search your book here!"
+            onChange={(e) => setInputValue(e.target.value)}
+            value={inputValue}
+          />
+        </Form>
+
+        {!inputValue
+          ? bookList.map((bk) => <SingleBook key={bk.asin} book={bk} />)
+          : bookList
+              .filter((book) =>
+                book.title.toLowerCase().includes(inputValue.toLowerCase())
+              )
+              .map((bk) => <SingleBook key={bk.asin} book={bk} />)}
+      </Row>
+    </Container>
+  );
+};
 
 export default BookList;

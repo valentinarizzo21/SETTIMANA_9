@@ -9,17 +9,14 @@ import fantasyBooks from "./data/fantasy.json";
 function App() {
   return (
     <>
-     
-        <MyNavBar />
-      
-       
-          <MyAlert />
-       
-          {/* <CardsGenerated/> */}
-          <BookList bookList = {fantasyBooks}/>
-      
-        <MyFooter />
-     
+      <MyNavBar />
+
+      <MyAlert />
+
+      {/* <CardsGenerated/> */}
+      <BookList bookList={fantasyBooks} />
+
+      <MyFooter />
     </>
   );
 }
